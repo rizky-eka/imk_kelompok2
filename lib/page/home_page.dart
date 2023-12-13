@@ -141,9 +141,7 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             ),
-            SizedBox(
-              height: 8,
-            ), // Add spacing between the two lists
+            SizedBox(height: 8),
             Text(
               'Kategori',
               style: TextStyle(
@@ -152,55 +150,161 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(height: 10),
-            SizedBox(
-              height: 300,
-              child: ListView.builder(
-                itemCount: 10,
-                itemBuilder: (BuildContext context, int index) {
-                  return Container(
-                    height: 80,
-                    width: 119,
-                    margin: EdgeInsets.symmetric(vertical: 4),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Colors.grey,
-                        width: 1,
-                      ),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: ListTile(
-                      title: Column(
+            Container(
+              width: 400,
+              height: 90,
+              decoration: ShapeDecoration(
+                shape: RoundedRectangleBorder(
+                  side: BorderSide(width: 1),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Sayuran ',
+                            'Sayuran',
                             style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                           Text(
                             'Sayur sayuran yang kami rekomendasikan untuk kesehatan gizi anda',
-                            style: TextStyle(fontSize: 8),
-                          ),
-                        ],
-                      ),
-                      trailing: Column(
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(8),
-                            child: Image.asset(
-                              'assets/img1.jpeg',
-                              width: 80,
-                              height: 50,
-                              fit: BoxFit.cover,
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: Colors.grey,
                             ),
                           ),
                         ],
                       ),
                     ),
-                  );
-                },
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: Image.asset(
+                        'assets/sayuran.jpeg',
+                        width: 85,
+                        height: 64,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
+            SizedBox(height: 10),
+            Container(
+              width: 400,
+              height: 90,
+              decoration: ShapeDecoration(
+                shape: RoundedRectangleBorder(
+                  side: BorderSide(width: 1),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Buah-buahan',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            'Buah-buahan yang kami rekomendasikan untuk anda yang tidak suka memakan sayur sayuran',
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: Image.asset(
+                        'assets/buah.jpeg',
+                        width: 85,
+                        height: 64,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 10),
+            Container(
+              width: 400,
+              height: 90,
+              decoration: ShapeDecoration(
+                shape: RoundedRectangleBorder(
+                  side: BorderSide(width: 1),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Kacang-Kacangan',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            'Kacang kacangan yang kami rekomendasikan untuk anda yang bosan memakan buah buahan dan sayur sayuran',
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: Image.asset(
+                        'assets/kacang.jpeg',
+                        width: 85,
+                        height: 64,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
